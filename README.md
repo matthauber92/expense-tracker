@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+# Expense Tracker Desktop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cross‑platform desktop expense tracker built with **React**, **Vite**, **Electron**, and **Material UI** (MUI). It
+features:
 
-Currently, two official plugins are available:
+- Collapsible sidebar navigation with active/hover states
+- Light & dark theme toggling
+- React Router integration for multiple pages (Dashboard, Transactions, Settings)
+- Persistent data storage (via localStorage or filesystem)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/)LTS (>= 16.x)
+- [npm](https://docs.npmjs.com/cli/v9/commands/npm)or [Yarn](https://yarnpkg.com/) package manager
+
+### Installation
+
+Clone this repository and install dependencies:
+
+```bash
+git clone <your-repo-url>
+cd expense-tracker
+npm install
+# or
+# yarn install
+
+
+# Terminal 1: start Vite
+npm run dev
+
+# Terminal 2: start Electron (auto-loads http://localhost:5173)
+npm run electron-dev
+
+
+npm run build      # bundles React for production
+npm run electron   # launches the built app in Electron
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Technology         | Docs                                         |
+|--------------------|----------------------------------------------|
+| React              | https://react.dev/ (or https://reactjs.org/) |
+| Vite               | https://vitejs.dev/                          |
+| Electron           | https://www.electronjs.org/                  |
+| Material UI (MUI)  | https://mui.com/                             |
+| React Router       | https://reactrouter.com/                     |
+| Day.js (Date Pick) | https://day.js.org/                          |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🔗 Useful Links
+
+- React Docs: https://react.dev/
+- Vite Docs: https://vitejs.dev/guide/
+- Electron Docs: https://www.electronjs.org/docs/latest/
+- MUI Getting Started: https://mui.com/getting-started/installation/
+- React Router Tutorial: https://reactrouter.com/docs/en/v6  
