@@ -40,6 +40,9 @@
       ],
       "@context/*": [
         "./src/context/*"
+      ],
+      "@components/*": [
+        "./src/common/components/*"
       ]
     }
   },

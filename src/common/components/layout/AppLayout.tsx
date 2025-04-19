@@ -157,6 +157,7 @@ export default function AppLayout() {
         }}
       >
         <Toolbar/>
+
         <Outlet/>
       </Box>
     </Box>
